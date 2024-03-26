@@ -27,7 +27,8 @@ lista = []
 lista.append("123456")
 print(next(kwa))
 try:
-    print(next(kwa))  # StopIteration
+    print(next(kwa))  # StopIteration - bład gdy wyczerpiemy generator
+    print(next(kwa))
 except StopIteration:
     print("Generator zakończył działanie")
 
