@@ -94,7 +94,7 @@ print(b)  # [2, 3]
 def counter(start=0):
     n = start
     while True:
-        result = yield n
+        result = yield n  # do result trafia komunikaty wysłane jako send, gdy nie ma przyjmie wartość None
         print(result)
         n += 1
         if result == 'q':
@@ -107,7 +107,7 @@ print(next(c))
 print(next(c))
 print(c.send("OK"))  # OK
 try:
-    print(c.send("q"))
+    print(c.send("q"))  # wysyłamy komunikat do generatora
 except StopIteration as e:
     print("Generator zakończył działanie", e)
 # print(next(c))  #
