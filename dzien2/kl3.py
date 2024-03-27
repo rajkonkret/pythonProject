@@ -1,3 +1,6 @@
+from pprint import pprint
+
+
 class ContactList(list['Contact']):
     def search(self, name):
         matching_contacts = []
@@ -55,3 +58,13 @@ print(Contact.all_contacts)
 #  Contact Mietek zolza @ wp.pl,
 #  suplier,
 #  Friend Tomek abc @ wp.pl + 48 123456789]
+print(Friend.__mro__)  # kolejnośc rozwiązywania nazw przy obiektach
+# (<class '__main__.Friend'>, <class '__main__.Suplier'>, <class '__main__.Contact'>, <class 'object'>)
+f1.order("frytki")  # frytki zamówiono od Tomek
+
+pprint(Contact.all_contacts)
+# [Contact Adam adam@wp.pl,
+#  Contact Radek mietekpl@wp.pl,
+#  Contact Mietek zolza@wp.pl,
+#  suplier,
+#  Friend Tomek abc@wp.pl +48 123456789]
