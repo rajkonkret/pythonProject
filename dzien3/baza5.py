@@ -33,3 +33,45 @@ class Book(Base):
 
 
 Base.metadata.create_all(engine)
+
+Session = sessionmaker(bind=engine)
+session = Session()
+
+new_author = Author(name="Adam Mickiewicz")
+new_publisher = Publisher(name="Wydawnictwo XYZ")
+new_book = Book(title="Pan Tadeusz", author=new_author, publisher=new_publisher)
+
+# session.add_all(
+#     [new_author, new_publisher, new_book]
+# )
+
+session.commit()
+session.close()
+
+authors = session.query(Author).all()
+print(authors)
+for author in authors:
+    print(f"Author: {author.name}")
+    for b in author.books:
+        print(f"Ksiązka {b.title}, Wydawca {b.publisher.name}")
+print("------")
+
+publishers = session.query(Publisher).all()
+for p in publishers:
+    print(f"Wydawca: {p.name}")
+    for b in p.books:
+        print(f"Ksiązka {b.title}, Author: {b.author.name}")
+#
+# Author: Adam Mickiewicz
+# Ksiązka Pan Tadeusz, Wydawca Wydawnictwo XYZ
+# Author: Adam Mickiewicz
+# Ksiązka Pan Tadeusz, Wydawca Wydawnictwo XYZ
+# Author: Adam Mickiewicz
+# Ksiązka Pan Tadeusz, Wydawca Wydawnictwo XYZ
+# ------
+# Wydawca: Wydawnictwo XYZ
+# Ksiązka Pan Tadeusz, Author: Adam Mickiewicz
+# Wydawca: Wydawnictwo XYZ
+# Ksiązka Pan Tadeusz, Author: Adam Mickiewicz
+# Wydawca: Wydawnictwo XYZ
+# Ksiązka Pan Tadeusz, Author: Adam Mickiewicz
