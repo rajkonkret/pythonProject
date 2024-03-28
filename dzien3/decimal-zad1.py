@@ -8,6 +8,12 @@ print(sys.float_info)
 #                min_10_exp=-307, dig=15, mant_dig=53, epsilon=2.220446049250313e-16, radix=2, rounds=1)
 
 # Decimal - typ danych do ominięcia problemu liczb float
+# """
+#     Construct a new Decimal object. 'value' can be an integer, string, tuple,
+#     or another Decimal object. If no value is given, return Decimal('0'). The
+#     context does not affect the conversion and is only passed to determine if
+#     the InvalidOperation trap is active.
+#     """
 kwota1 = Decimal('10.25')
 kwota2 = Decimal('5.50')
 print(kwota1 < kwota2)  # __lt__ False
