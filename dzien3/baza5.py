@@ -50,6 +50,10 @@ session.close()
 
 authors = session.query(Author).all()
 print(authors)
+# [<__main__.Author object at 0x0000020B4C26B260>,
+# <__main__.Author object at 0x0000020B4C26BFB0>,
+# <__main__.Author object at 0x0000020B4C2C8E90>]
+
 for author in authors:
     print(f"Author: {author.name}")
     for b in author.books:
