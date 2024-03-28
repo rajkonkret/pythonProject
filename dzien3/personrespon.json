@@ -1,0 +1,66 @@
+{
+  "results": [
+    {
+      "gender": "male",
+      "name": {
+        "title": "Mr",
+        "first": "Arne",
+        "last": "Amundsen"
+      },
+      "location": {
+        "street": {
+          "number": 7856,
+          "name": "Birgitte Hammers vei"
+        },
+        "city": "Fotlandsvåg",
+        "state": "Aust-Agder",
+        "country": "Norway",
+        "postcode": "3177",
+        "coordinates": {
+          "latitude": "39.7830",
+          "longitude": "-0.3976"
+        },
+        "timezone": {
+          "offset": "+1:00",
+          "description": "Brussels, Copenhagen, Madrid, Paris"
+        }
+      },
+      "email": "arne.amundsen@example.com",
+      "login": {
+        "uuid": "107c1303-c364-49a6-ad11-d28f65eed2a3",
+        "username": "bigbird884",
+        "password": "stella",
+        "salt": "UmBrMPyx",
+        "md5": "5b00cb6103bd87ffbe97b85a55faf047",
+        "sha1": "0b8192e51ff9dc8441ebd445e33420c65e0ff582",
+        "sha256": "87d5b9cc3b3974c44b9871d3c936e3c79b5af2d0f34ae6a4982f22d685e14ade"
+      },
+      "dob": {
+        "date": "1952-05-17T20:52:22.917Z",
+        "age": 71
+      },
+      "registered": {
+        "date": "2012-12-25T08:24:13.349Z",
+        "age": 11
+      },
+      "phone": "53998162",
+      "cell": "99729464",
+      "id": {
+        "name": "FN",
+        "value": "17055210535"
+      },
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/men/94.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/men/94.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/94.jpg"
+      },
+      "nat": "NO"
+    }
+  ],
+  "info": {
+    "seed": "db329992c117171a",
+    "results": 1,
+    "page": 1,
+    "version": "1.4"
+  }
+}
