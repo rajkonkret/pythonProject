@@ -41,13 +41,13 @@ Session = sessionmaker(bind=engine)
 session = Session()
 
 # wypełnianie bazy danymi
-# anakin = Person(name='Anakin', age=38)
-# obi = Person(name="Obi", age=45)
+anakin = Person(name='Anakin', age=38)
+obi = Person(name="Obi", age=45)
 
-# obi.addresses = [
-#     Address(email='obi@example,com'),
-#     Address(email='waka@wp.pl')
-# ]
+obi.addresses = [
+    Address(email='obi@example,com'),
+    Address(email='waka@wp.pl')
+]
 vader = Person(name='Lord Vader', age=59)
 vader.addresses = [
     Address(email='vader@vader.com'),
@@ -55,7 +55,7 @@ vader.addresses = [
 ]
 # session.add(anakin)
 # session.add(obi)
-# session.add(vader)
+session.add(vader)
 
 session.commit()
 session.close()
